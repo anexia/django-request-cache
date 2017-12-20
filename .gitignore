@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+dist/**
+django_request_cache.egg-info/**
+.idea/**
+venv/
+build/
+.tox/
