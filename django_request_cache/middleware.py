@@ -1,5 +1,6 @@
 from django.core.cache.backends.base import BaseCache
 from django.core.cache.backends.locmem import LocMemCache
+from django.utils.deprecation import MiddlewareMixin
 from django.utils.synch import RWLock
 
 # Attribution: RequestCache and RequestCacheMiddleware are from a source code snippet on StackOverflow
@@ -26,7 +27,7 @@ class RequestCache(LocMemCache):
         self._lock = RWLock()
 
 
-class RequestCacheMiddleware(object):
+class RequestCacheMiddleware(MiddlewareMixin):
     """
     For every request, a fresh cache instance is stored in ``request.cache``.
     The cache instance lives only as long as request does.
