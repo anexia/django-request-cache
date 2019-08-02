@@ -30,6 +30,9 @@ def cache_calculate_key(*args, **kwargs):
     return str(key)
 
 
+NO_CACHE_RESULT = 'NO_CACHE_RESULT'
+
+
 def cache_for_request(fn):
     """
     Decorator that allows to cache a function call with parameters and its result only for the current request
@@ -47,9 +50,9 @@ def cache_for_request(fn):
 
         # cache found -> check if a result is already available for this function call
         key = cache_calculate_key(fn.__name__, *args, **kwargs)
-        result = getattr(cache, key, None)
+        result = getattr(cache, key, NO_CACHE_RESULT)
 
-        if not result:
+        if result == NO_CACHE_RESULT:
             # no result available -> execute function
             result = fn(*args, **kwargs)
             setattr(cache, key, result)
