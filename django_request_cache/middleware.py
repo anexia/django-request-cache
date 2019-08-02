@@ -1,7 +1,7 @@
 from django.core.cache.backends.base import BaseCache
 from django.core.cache.backends.locmem import LocMemCache
-from django.utils.deprecation import MiddlewareMixin
 from django.utils.synch import RWLock
+from django_userforeignkey.middleware import MiddlewareMixin
 
 # Attribution: RequestCache and RequestCacheMiddleware are from a source code snippet on StackOverflow
 # https://stackoverflow.com/questions/3151469/per-request-cache-in-django/37015573#37015573
