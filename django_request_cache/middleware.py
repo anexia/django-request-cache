@@ -1,7 +1,10 @@
+# coding: utf-8
+from collections import OrderedDict
+from threading import Lock
+
 from django.core.cache.backends.base import BaseCache
 from django.core.cache.backends.locmem import LocMemCache
 from django.utils.deprecation import MiddlewareMixin
-from django.utils.synch import RWLock
 
 # Attribution: RequestCache and RequestCacheMiddleware are from a source code snippet on StackOverflow
 # https://stackoverflow.com/questions/3151469/per-request-cache-in-django/37015573#37015573
@@ -20,11 +23,11 @@ class RequestCache(LocMemCache):
     def __init__(self):
         # We explicitly do not call super() here, because while we want BaseCache.__init__() to run, we *don't*
         # want LocMemCache.__init__() to run, because that would store our caches in its globals.
-        BaseCache.__init__(self, {})
+        BaseCache.__init__(self, params={})
 
-        self._cache = {}
+        self._cache = OrderedDict()
         self._expire_info = {}
-        self._lock = RWLock()
+        self._lock = Lock()
 
 
 class RequestCacheMiddleware(MiddlewareMixin):
