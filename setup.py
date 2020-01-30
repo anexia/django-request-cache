@@ -82,4 +82,8 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
+    # $ setup.py upload support.
+    cmdclass={
+        'upload': UploadCommand,
+    },
 )
