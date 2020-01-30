@@ -3,6 +3,8 @@
 dist/**
 django_request_cache.egg-info/**
 .idea/**
+.vscode/**
 venv/
 build/
 .tox/
+
