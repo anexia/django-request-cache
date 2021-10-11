@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 PyPi: [https://pypi.org/project/django-request-cache/](https://pypi.org/project/django-request-cache/).
 
+## Unreleased
+### Removed
+- Dropped support for Python 3.5 and 3.6
+- Dropped support for Django 2.1
+### Added
+- Added support for Python 3.9 and 3.10
+- Added support for Django 3.1 and 3.2
+
 ## [1.2](https://pypi.org/project/django-request-cache/1.2/)
 ### Added
 - Django 2.1+ support
