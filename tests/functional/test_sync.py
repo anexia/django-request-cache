@@ -7,7 +7,6 @@ from django_request_cache import cache_for_request
 
 class RequestCacheMiddlewareTest(TestCase):
 
-
     @mock.patch("testapp.views.sync.retrieve_time", spec_set=["__call__"])
     def test_sync_one_request(self, mock_func):
         cached_func = mock.MagicMock(spec_set=["__call__", "__name__"])
