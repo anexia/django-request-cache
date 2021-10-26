@@ -1,0 +1,9 @@
+[flake8]
+count = True
+max-line-length = 127
+max-complecity = 10
+exclude =
+    .git,
+    .tox,
+    .venv
+statistics = True
