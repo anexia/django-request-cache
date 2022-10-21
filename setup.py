@@ -15,7 +15,7 @@ setup(
     license='MIT',
     description='A simple Django app that provides a per-request cache.',
     long_description=README,
-    url='https://github.com/anexia-it/django-request-cache',
+    url='https://github.com/anexia/django-request-cache',
     author='Harald Nezbeda',
     author_email='hnezbeda@anexia-it.com',
     install_requires=[
