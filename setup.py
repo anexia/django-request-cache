@@ -19,16 +19,15 @@ setup(
     author='Harald Nezbeda',
     author_email='hnezbeda@anexia-it.com',
     install_requires=[
-        "django>=2.2,!=3.0.*",
         "django_userforeignkey"
     ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 2.2',
-        'Framework :: Django :: 3.1',
         'Framework :: Django :: 3.2',
+	'Framework :: Django :: 4.0',
+	'Framework :: Django :: 4.1',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
