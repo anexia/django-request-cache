@@ -4,8 +4,10 @@ Django Request Cache
 
 .. image:: https://badge.fury.io/py/django-request-cache.svg
     :target: https://badge.fury.io/py/django-request-cache
-.. image:: https://github.com/anexia/django-request-cache/actions/workflows/test.yml/badge.svg?branch=master
+.. image:: https://github.com/anexia/django-request-cache/actions/workflows/test.yml/badge.svg?branch=main
     :target: https://github.com/anexia/django-request-cache/actions/workflows/test.yml
+.. image:: https://codecov.io/gh/anexia/django-request-cache/branch/main/graph/badge.svg
+    :target: https://codecov.io/gh/anexia/django-request-cache
 
 Django Request Cache provides a cache for each request (within your Django Request/Response cycle).
 
