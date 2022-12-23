@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 PyPi: [https://pypi.org/project/django-request-cache/](https://pypi.org/project/django-request-cache/).
 
-## Unreleased
+## 1.4
+### Added
+- Wrapped func is recalled when result is None
+
+## 1.3
 ### Removed
 - Dropped support for Python 3.5 and 3.6
 - Dropped support for Django 2.1
