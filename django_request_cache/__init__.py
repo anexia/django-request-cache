@@ -45,12 +45,14 @@ def cache_for_request(fn):
 
         # cache found -> check if a result is already available for this function call
         key = cache_calculate_key(fn.__name__, *args, **kwargs)
-        result = getattr(cache, key, None)
 
-        if not result:
+        try:
+            result = getattr(cache, key)
+        except AttributeError:
             # no result available -> execute function
             result = fn(*args, **kwargs)
             setattr(cache, key, result)
 
         return result
     return wrapper
+
