@@ -23,3 +23,10 @@ class RequestCacheMiddlewareTest(TestCase):
         self.client.get('/')
         self.assertEqual(mock_func.call_count, 4)
         self.assertEqual(cached_func.call_count, 2)
+
+    def test_sync_pandas_dataframe(self):
+        """
+        Esure that the cache_for_request decorator works with pandas dataframes.
+        """
+        response = self.client.get('/pandas_dataframe/')
+        self.assertEqual(response.status_code, 200)
